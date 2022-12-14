@@ -5,4 +5,4 @@
 
 [Макет](https://www.figma.com/file/BhULVGGIachSAjoBazhP9P/Travel?t=GJm2imbXMFbw4igd-0) в Figma
 
-[Deploy на GitHub Pages]()
+[Deploy на GitHub Pages](https://alexnemtsev.github.io/travel/)
