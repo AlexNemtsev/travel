@@ -52,7 +52,7 @@ body {
 .header {
     position: relative;
     z-index: 1;
-    background-color: rgba(242, 120, 92, 0.7);
+    background: linear-gradient(rgba(242, 120, 92, 0.7), rgba(242, 120, 92, 0.7)), url(./assets/images/backgrounds/1440px/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg) top;
     display: flex;
     height: var(--header-height);
     color: white;
@@ -65,7 +65,7 @@ body {
     display: none;
 }
 
-.logo {
+.header__logo {
     font-family: 'Magra';
     font-style: normal;
     font-weight: 600;
@@ -89,7 +89,7 @@ body {
     gap: 42px;
 }
 
-.nav-link {
+.navbar__link {
     font-family: 'Red Hat Display';
     font-style: normal;
     font-weight: 500;
@@ -100,7 +100,7 @@ body {
     text-decoration: none;
 }
 
-.nav-link:hover {
+.navbar__link:hover {
     transition-duration: 200ms;
     transition-delay: 100ms;
     text-decoration: underline;
@@ -145,10 +145,11 @@ button:hover {
 }
 
 .preview {
-    height: 765px;
+    height: calc(765px - var(--header-height));
     background: url(./assets/images/backgrounds/1440px/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg);
     background-repeat: no-repeat;
-    position: relative;
+    background-position: bottom;
+/*     position: relative; */
     bottom: var(--header-height);
 }
 
@@ -693,14 +694,14 @@ form>label {
 
 @media (max-width: 880px) {
 
-    .logo {
+    .header__logo {
         font-size: 24px;
         line-height: 30px;
         margin-right: 0px;
         margin-left: 10px;
     }
 
-    .logo>img {
+    .header__logo>img {
         width: 20px;
     }
 
@@ -797,11 +798,11 @@ form>label {
         margin-right: 10px;
     }
 
-    .logo {
+    .header__logo {
         width: 87px;
     }
 
-    .nav-link {
+    .navbar__link {
         font-size: 12px;
         line-height: 20px;
     }
@@ -831,16 +832,16 @@ form>label {
         height: 79px;
     }
 
-    .logo>span {
+    .header__logo>span {
         display: none;
     }
 
-    .logo {
+    .header__logo {
         margin-left: 16px;
         margin-bottom: -1px;
     }
 
-    .logo>img {
+    .header__logo>img {
         width: 30px;
     }
 
@@ -1140,7 +1141,7 @@ form>label {
         text-align: right;
     }
 
-    .nav-link {
+    .navbar__link {
         font-size: 16px;
         line-height: 31px;
     }
