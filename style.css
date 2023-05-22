@@ -84,7 +84,7 @@ body {
     padding: 0;
 }
 
-.navbar>.list {
+.navbar__list {
     justify-content: flex-start;
     gap: 42px;
 }
@@ -135,7 +135,7 @@ button:hover {
     color: rgba(242, 120, 92, 1);
 }
 
-.header button {
+.login-button {
     padding: 10px 31px;
     margin-left: 75px;
 }
@@ -161,7 +161,7 @@ button:hover {
     padding-top: 121px;
 }
 
-h1 {
+.planning__headline {
     font-family: Aleo;
     font-weight: 700;
     color: white;
@@ -172,7 +172,7 @@ h1 {
     max-width: 790px;
 }
 
-.call {
+.planning__call {
     font-family: 'Aleo Italic';
     font-style: italic;
     font-weight: 700;
@@ -183,7 +183,7 @@ h1 {
     padding-bottom: 15px;
 }
 
-.search-field {
+.planning__search-field {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -224,7 +224,7 @@ h1 {
     display: none;
 }
 
-.section-header {
+.section-headline {
     color: var(--orange);
     font-family: 'Red Hat Display';
     font-size: 40px;
@@ -232,7 +232,7 @@ h1 {
     text-align: center;
 }
 
-.steps .section-header {
+.steps .section-headline {
     margin: 0 0 40px;
 }
 
@@ -304,7 +304,7 @@ button img {
     display: inline-block;
 }
 
-.destinations .section-header {
+.destinations .section-headline {
     margin-top: 97px;
     margin-bottom: 46px;
 }
@@ -369,7 +369,7 @@ button img {
     max-height: 1362px;
 }
 
-.stories .section-header {
+.stories .section-headline {
     text-align: center;
     margin: 80px auto 39px;
 }
