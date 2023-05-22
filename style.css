@@ -183,32 +183,35 @@ button:hover {
     padding-bottom: 15px;
 }
 
-.planning__search-field {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 10px;
-    max-width: 892px;
+.search {
+    box-sizing: border-box;
+    max-width: 890px;
     height: 95px;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
-}
-
-.placeholder {
+    border: none;
+    outline: none;
     font-family: 'Aleo Italic';
     font-size: 24px;
     color: var(--orange);
     padding-left: 41px;
 }
 
-.search-field>button {
+.search::placeholder {
+    color: var(--orange);
+}
+
+.search-button {
+    position: relative;
+    bottom: 78px;
+    left: 650px;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 32px;
     letter-spacing: 1px;
-    margin-right: 18px;
     max-height: 58px;
+    width: 228px;
     padding: 13px 32px;
     box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
 }
