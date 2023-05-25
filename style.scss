@@ -39,19 +39,9 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+.body {
   margin: 0 auto;
-}
-
-.container {
   max-width: 1440px;
-  width: 100%;
-  margin: 0 auto;
-
-  @media (max-width: 390px) {
-    max-width: 390px;
-    margin: 0;
-  }
 }
 
 header {
@@ -925,6 +915,12 @@ footer {
   @media (max-width: 880px) {
     justify-content: center;
   }
+
+  @media (max-width: 390px) {
+    height: 65px;
+    background: url(./assets/images/backgrounds/390px/Rectangle\ 28.jpg);
+    background-position: bottom;
+  }
 }
 
 .empty {
@@ -953,14 +949,6 @@ footer {
 
 .socialmedia-list li {
   margin: 5px 10px 0;
-}
-
-footer.container {
-  @media (max-width: 390px) {
-    height: 65px;
-    background: url(./assets/images/backgrounds/390px/Rectangle\ 28.jpg);
-    background-position: bottom;
-  }
 }
 
 footer p {
