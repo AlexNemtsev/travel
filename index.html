@@ -11,8 +11,8 @@
 </head>
 
 <body class="body">
-  <header>
-    <div class="burger-menu">
+  <header class="header container">
+    <dialog class="burger-menu">
       <nav>
         <img src="./assets/icons/header/cross-icon.svg" alt="cross" />
         <ul class="burger-list">
@@ -24,53 +24,49 @@
           <li><a href="#social-media" class="nav-link">Social Media</a></li>
         </ul>
       </nav>
-    </div>
-    <div class="pop-up-wrapper">
-      <div class="login-popup">
-        <h3>Log in to your account</h3>
-        <button class="facebook-button">
-          <img src="./assets/icons/pop-up/path14.svg" alt="Facebook icon" />
-          Sign In with Facebook
-        </button>
-        <button class="google-button">
-          <img src="./assets/icons/pop-up/Google Logo.svg" alt="Google icon" />
-          Sign In with Google
-        </button>
-        <div class="or-line">
-          <div class="line"></div>
-          <p>or</p>
-          <div class="line"></div>
-        </div>
-        <form action="" class="sign-in-form" method="post">
-          <label>E-mail</label>
-          <input type="text" class="email field" name="e-mail" />
-          <label>Password</label>
-          <input type="password" class="password field" name="password" />
-          <button class="sign-in-button" type="submit">Sign in</button>
-        </form>
-        <a href="" class="restore-password">Forgot Your Password?</a>
+    </dialog>
+    <dialog class="login-popup">
+      <h3>Log in to your account</h3>
+      <button class="facebook-button">
+        <img src="./assets/icons/pop-up/path14.svg" alt="Facebook icon" />
+        Sign In with Facebook
+      </button>
+      <button class="google-button">
+        <img src="./assets/icons/pop-up/Google Logo.svg" alt="Google icon" />
+        Sign In with Google
+      </button>
+      <div class="or-line">
         <div class="line"></div>
-        <div class="reg">
-          <span>Don’t have an account?&nbsp;</span><a href="" class="register-link">Register</a>
-        </div>
+        <p>or</p>
+        <div class="line"></div>
       </div>
-    </div>
-    <div class="header">
-      <div class="logo">
-        <img src="./assets/icons/header/Vector.svg" alt="Logo" /><span>
-          Travel Portal</span>
+      <form action="" class="sign-in-form" method="post">
+        <label>E-mail</label>
+        <input type="text" class="email field" name="e-mail" />
+        <label>Password</label>
+        <input type="password" class="password field" name="password" />
+        <button class="sign-in-button button" type="submit">Sign in</button>
+      </form>
+      <a href="" class="restore-password">Forgot Your Password?</a>
+      <div class="line"></div>
+      <div class="reg">
+        <span>Don’t have an account?&nbsp;</span><a href="" class="register-link">Register</a>
       </div>
-      <nav class="navbar">
-        <ul class="list">
-          <li><a href="#preview" class="nav-link">How It Works</a></li>
-          <li><a href="#steps" class="nav-link">Plan Your Trip </a></li>
-          <li><a href="#destinations" class="nav-link">Destinations</a></li>
-          <li><a href="#stories" class="nav-link">Travel Stories</a></li>
-        </ul>
-      </nav>
-      <button>Login</button>
-      <img src="./assets/icons/header/eva_menu-outline.svg" alt="menu" class="burger-icon" />
+    </dialog>
+    <div class="header__logo">
+      <img src="./assets/icons/header/Vector.svg" alt="Logo" /><span>
+        Travel Portal</span>
     </div>
+    <nav class="navbar">
+      <ul class="navbar__list list">
+        <li><a href="#preview" class="nav-link">How It Works</a></li>
+        <li><a href="#steps" class="nav-link">Plan Your Trip </a></li>
+        <li><a href="#destinations" class="nav-link">Destinations</a></li>
+        <li><a href="#stories" class="nav-link">Travel Stories</a></li>
+      </ul>
+    </nav>
+    <button class="login__button button">Login</button>
+    <img src="./assets/icons/header/eva_menu-outline.svg" alt="menu" class="burger-icon" />
   </header>
   <main>
     <section class="preview" id="preview">
@@ -80,7 +76,7 @@
           activities and more</span>
         <div class="search-field">
           <span class="placeholder">What would you like to do?</span>
-          <button>Start Planning</button>
+          <button class="button">Start Planning</button>
         </div>
       </div>
     </section>
@@ -186,7 +182,7 @@
           </svg>
         </div>
       </div>
-      <button>
+      <button class="button">
         <img src="./assets/icons/destinations/bi_arrow-right.svg" alt="arrow right" /><span>Find More</span>
       </button>
     </section>
@@ -262,7 +258,7 @@
           </article>
         </div>
         <div class="story-button">
-          <button>
+          <button class="button">
             <img src="./assets/icons/destinations/bi_arrow-right.svg" alt="arrow right" /><span>See More</span>
           </button>
         </div>

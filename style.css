@@ -26,7 +26,6 @@
 :root {
   --header-height: 90px;
   --orange: #f2785c;
-  --red-border: 1px solid red;
 }
 
 html {
@@ -38,32 +37,31 @@ html {
   max-width: 1440px;
 }
 
+.container {
+  max-width: 1200px;
+  padding: 0 120px;
+}
 @media (max-width: 390px) {
-  header {
-    display: flex;
-    flex-direction: column;
+  .container {
+    padding: 0 15px;
   }
 }
 
 .header {
   position: relative;
   z-index: 1;
-  background-color: rgba(242, 120, 92, 0.7);
+  background: linear-gradient(rgba(242, 120, 92, 0.7), rgba(242, 120, 92, 0.7)), url(./assets/images/backgrounds/1440px/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg) top;
+  box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
   display: flex;
   height: var(--header-height);
   color: white;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
 @media (max-width: 390px) {
   .header {
-    max-width: 370px;
-    background: none;
+    background: linear-gradient(180deg, #0d606f 0%, rgba(13, 96, 111, 0) 25.1%);
     box-shadow: none;
-    justify-content: space-between;
-    align-items: flex-end;
-    height: 79px;
   }
 }
 
@@ -73,7 +71,6 @@ html {
 @media (max-width: 390px) {
   .burger-menu {
     align-self: flex-end;
-    display: flex;
     justify-content: flex-end;
     position: fixed;
     z-index: 2;
@@ -113,7 +110,7 @@ html {
   text-align: right;
 }
 
-.logo {
+.header__logo {
   font-family: "Magra";
   font-style: normal;
   font-weight: 600;
@@ -122,7 +119,7 @@ html {
   margin-right: 38px;
 }
 @media (max-width: 880px) {
-  .logo {
+  .header__logo {
     font-size: 24px;
     line-height: 30px;
     margin-right: 0px;
@@ -130,12 +127,12 @@ html {
   }
 }
 @media (max-width: 650px) {
-  .logo {
+  .header__logo {
     width: 87px;
   }
 }
 @media (max-width: 390px) {
-  .logo {
+  .header__logo {
     margin-left: 16px;
     margin-bottom: -1px;
   }
@@ -153,7 +150,7 @@ html {
 }
 
 @media (max-width: 390px) {
-  .logo > span {
+  .header__logo > span {
     display: none;
   }
 }
@@ -220,7 +217,7 @@ html {
   }
 }
 
-button {
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,7 +231,7 @@ button {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(13, 96, 111, 0.16);
 }
 
-button:hover {
+.button:hover {
   transition-duration: 200ms;
   transition-delay: 50ms;
   color: rgb(242, 120, 92);
@@ -247,23 +244,23 @@ button:hover {
   color: rgb(242, 120, 92);
 }
 
-.header button {
+.login__button {
   padding: 10px 31px;
   margin-left: 75px;
 }
 @media (max-width: 880px) {
-  .header button {
+  .login__button {
     margin-left: 30px;
     margin-right: 10px;
   }
 }
 @media (max-width: 650px) {
-  .header button {
+  .login__button {
     margin-left: 10px;
   }
 }
 @media (max-width: 390px) {
-  .header button {
+  .login__button {
     display: none;
   }
 }
@@ -278,10 +275,10 @@ button:hover {
 }
 
 .preview {
-  height: 765px;
+  height: calc(765px - var(--header-height));
   background: url(./assets/images/backgrounds/1440px/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg);
   background-repeat: no-repeat;
-  position: relative;
+  background-position: bottom;
   bottom: var(--header-height);
 }
 @media (max-width: 390px) {
@@ -290,7 +287,6 @@ button:hover {
     background: linear-gradient(180deg, #0d606f 0%, rgba(13, 96, 111, 0) 25.1%), url(./assets/images/backgrounds/390px/garrett-parker-DlkF4-dbCOU-unsplash\ 2.jpg);
     background-repeat: no-repeat;
     position: relative;
-    bottom: 79px;
   }
 }
 
@@ -1041,7 +1037,7 @@ footer p {
 }
 
 .pop-up-wrapper.active {
-  transform: translateY(0);
+  transform: translateY(50%);
   background-color: rgba(0, 0, 0, 0.3);
   transition-property: transform, background-color;
   transition-duration: 500ms, 200ms;
@@ -1054,7 +1050,6 @@ body.active {
 }
 
 .login-popup {
-  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   box-sizing: border-box;
@@ -1070,11 +1065,17 @@ body.active {
   font-size: 15px;
   line-height: 18px;
   text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+  border: none;
+  align-self: flex-start;
 }
 @media (max-width: 390px) {
   .login-popup {
     width: 360px;
   }
+}
+
+.login-popup.show {
+  display: flex;
 }
 
 .login-popup > h3 {
