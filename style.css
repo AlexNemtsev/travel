@@ -107,7 +107,7 @@ body {
     color: #0D606F;
 }
 
-button {
+.button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,7 +126,6 @@ button:hover {
     transition-delay: 50ms;
     color: rgba(242, 120, 92, 1);
     cursor: pointer;
-
 }
 
 .button:hover {
@@ -183,7 +182,7 @@ button:hover {
     padding-bottom: 15px;
 }
 
-.search {
+.planning__search-field {
     box-sizing: border-box;
     max-width: 890px;
     height: 95px;
@@ -197,11 +196,11 @@ button:hover {
     padding-left: 41px;
 }
 
-.search::placeholder {
+.planning__search-field::placeholder {
     color: var(--orange);
 }
 
-.search-button {
+.planning__search-button {
     position: relative;
     bottom: 78px;
     left: 650px;
