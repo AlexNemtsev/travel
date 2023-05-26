@@ -1,10 +1,10 @@
 const crossButton = document.querySelector('nav > img');
 const menuContainer = document.querySelector('.burger-menu');
-const nav = document.querySelector('.burger-menu > nav');
+const burgerNavigation = document.querySelector('.burger-menu__navigation');
 const navLinks = document.querySelectorAll('.nav-link');
 const burgerIcon = document.querySelector('.burger-icon');
 
-const body = document.querySelector('body');
+const { body } = document;
 
 const loginButton = document.querySelector('header>button');
 const popupWrapper = document.querySelector('.pop-up-wrapper');
@@ -16,12 +16,12 @@ burgerIcon.addEventListener('click', () => showMenu());
 
 function showMenu() {
   menuContainer.classList.toggle('active');
-  body.style.overflow = 'hidden';
+  body.classList.toggle('not-active');
 }
 
 function hideMenu() {
   menuContainer.classList.toggle('active');
-  body.style.overflow = 'initial';
+  body.classList.toggle('not-active');
 }
 
 crossButton.addEventListener('click', () => hideMenu());
@@ -39,7 +39,7 @@ for (const link of navLinks) {
 }
 
 document.addEventListener('click', (e) => {
-  const withinNav = e.composedPath().includes(nav);
+  const withinNav = e.composedPath().includes(burgerNavigation);
   const withinContaier = e.composedPath().includes(menuContainer);
 
   if (!withinNav && withinContaier) {
