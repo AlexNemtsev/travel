@@ -5,7 +5,7 @@
 }
 
 @font-face {
-  font-family: "Red Hat Display";
+  font-family: 'Red Hat Display';
   src: url(./assets/fonts/red-hat-display/RedHatDisplay-Regular.ttf);
 }
 
@@ -15,17 +15,17 @@
 }
 
 @font-face {
-  font-family: "Aleo Bold";
+  font-family: 'Aleo Bold';
   src: url(./assets/fonts/Aleo/Aleo-Bold.ttf);
 }
 
 @font-face {
-  font-family: "Aleo Bold Italic";
+  font-family: 'Aleo Bold Italic';
   src: url(./assets/fonts/Aleo/Aleo-BoldItalic.ttf);
 }
 
 @font-face {
-  font-family: "Aleo Italic";
+  font-family: 'Aleo Italic';
   src: url(./assets/fonts/Aleo/Aleo-Italic.ttf);
 }
 
@@ -56,8 +56,7 @@ html {
   position: relative;
   z-index: 1;
   background: linear-gradient(rgba(242, 120, 92, 0.7), rgba(242, 120, 92, 0.7)),
-    url(./assets/images/backgrounds/1440px/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg)
-      top;
+    url(./assets/images/backgrounds/1440px/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg) top;
   box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
   display: flex;
   height: var(--header-height);
@@ -72,36 +71,30 @@ html {
 }
 
 .burger-menu {
-  display: none;
-
-  @media (max-width: 390px) {
-    align-self: flex-end;
-    justify-content: flex-end;
-    position: fixed;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.3);
-    transform: translateX(100%);
-    transition: 1s;
-  }
+  position: absolute;
+  align-self: flex-start;
+  justify-content: flex-end;
+  transform: translateX(230%);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .burger-menu.active {
-  @media (max-width: 390px) {
-    position: fixed;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    transform: translateX(0);
-    transition: 300ms;
-  }
+  display: flex;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(0);
+  background-color: rgba(0, 0, 0, 0.3);
+  transition-property: transform, background-color;
+  transition-duration: 500ms, 200ms;
+  transition-delay: 0s, 500ms;
+  transition-timing-function: ease-in;
 }
 
 .burger-menu nav {
-  position: relative;
-  z-index: 3;
   width: 165px;
   height: 250px;
-  background-color: #f2785c;
+  background-color: var(--orange);
   box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
   border-radius: 10px;
   display: flex;
@@ -116,7 +109,7 @@ html {
 }
 
 .header__logo {
-  font-family: "Magra";
+  font-family: 'Magra';
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
@@ -180,7 +173,7 @@ html {
 }
 
 .nav-link {
-  font-family: "Red Hat Display";
+  font-family: 'Red Hat Display';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -221,7 +214,7 @@ nav > img {
   text-decoration: none;
   background: rgba(13, 96, 111, 1);
   color: white;
-  font-family: "Red Hat Display";
+  font-family: 'Red Hat Display';
   font-size: 16px;
   border-radius: 10px;
   border: none;
@@ -316,7 +309,7 @@ h1 {
 }
 
 .call {
-  font-family: "Aleo Italic";
+  font-family: 'Aleo Italic';
   font-style: italic;
   font-weight: 700;
   font-size: 20px;
@@ -349,7 +342,7 @@ h1 {
 }
 
 .placeholder {
-  font-family: "Aleo Italic";
+  font-family: 'Aleo Italic';
   font-size: 24px;
   color: var(--orange);
   padding-left: 41px;
@@ -374,8 +367,7 @@ h1 {
   margin-right: 18px;
   max-height: 58px;
   padding: 13px 32px;
-  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08),
-    0px 2px 3px rgba(13, 96, 111, 0.16);
+  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
 
   @media (max-width: 880px) {
     font-size: 18px;
@@ -412,7 +404,7 @@ h1 {
 
 .section-header {
   color: var(--orange);
-  font-family: "Red Hat Display";
+  font-family: 'Red Hat Display';
   font-size: 40px;
   letter-spacing: 1px;
   text-align: center;
@@ -560,8 +552,7 @@ h1 {
   margin-top: 40px;
   font-size: 24px;
   letter-spacing: 1px;
-  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08),
-    0px 2px 3px rgba(13, 96, 111, 0.16);
+  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
   padding: 10px 31px;
 
   @media (max-width: 390px) {
@@ -631,7 +622,7 @@ button img {
   width: 59.72vw;
   display: flex;
   flex-direction: column;
-  font-family: "Red Hat Display";
+  font-family: 'Red Hat Display';
   color: white;
   font-size: 32px;
   letter-spacing: 1px;
@@ -666,7 +657,7 @@ button img {
   }
 
   @media (max-width: 390px) {
-    font-family: "Red Hat Display";
+    font-family: 'Red Hat Display';
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -824,7 +815,7 @@ button img {
 }
 
 article {
-  font-family: "Aleo";
+  font-family: 'Aleo';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -839,7 +830,7 @@ article {
 
 h3 {
   margin: 0 auto 24px;
-  font-family: "Aleo";
+  font-family: 'Aleo';
   font-style: normal;
   font-weight: 400;
   font-size: 35px;
@@ -873,7 +864,7 @@ div.story-button {
 .stories-list button {
   padding: 9px 38px;
   margin-bottom: 15px;
-  font-family: "Red Hat Display";
+  font-family: 'Red Hat Display';
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -949,7 +940,7 @@ footer {
 }
 
 footer p {
-  font-family: "Red Hat Display";
+  font-family: 'Red Hat Display';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -998,7 +989,7 @@ body.active {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   text-align: center;
-  font-family: "Aleo";
+  font-family: 'Aleo';
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
@@ -1031,8 +1022,7 @@ body.active {
 
 .facebook-button {
   background: #1877f2;
-  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08),
-    0px 2px 3px rgba(13, 96, 111, 0.16);
+  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
   border-radius: 10px;
   padding: 15px 0;
   font-weight: 400;
@@ -1059,8 +1049,7 @@ body.active {
 
 .google-button {
   background: #ffffff;
-  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08),
-    0px 2px 3px rgba(13, 96, 111, 0.16);
+  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
   border-radius: 10px;
   font-size: 20px;
   line-height: 26px;
@@ -1077,7 +1066,7 @@ body.active {
 
 .or-line > p {
   padding: 9px;
-  font-family: "Aleo";
+  font-family: 'Aleo';
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -1102,7 +1091,7 @@ form {
 
 form > label {
   margin: 13px 0 5px;
-  font-family: "Aleo";
+  font-family: 'Aleo';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1113,8 +1102,7 @@ form > label {
 
 .field {
   font-size: 45px;
-  box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08),
-    inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+  box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
   border-radius: 10px;
   border: none;
   margin-bottom: 8px;
