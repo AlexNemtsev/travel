@@ -34,6 +34,26 @@
   --orange: #f2785c;
 }
 
+@mixin button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: rgba(13, 96, 111, 1);
+  color: white;
+  font-family: 'Red Hat Display';
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  &:hover {
+    transition-duration: 200ms;
+    transition-delay: 50ms;
+    color: var(--orange);
+    cursor: pointer;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -143,7 +163,7 @@ html {
   }
 }
 
-.logo > img {
+.header__logo > img {
   @media (max-width: 880px) {
     width: 20px;
   }
@@ -173,7 +193,7 @@ html {
   padding: 0;
 }
 
-.navbar > .list {
+.navbar__list {
   justify-content: flex-start;
   gap: 42px;
 
@@ -182,7 +202,7 @@ html {
   }
 }
 
-.nav-link {
+.navbar__link {
   font-family: 'Red Hat Display';
   font-style: normal;
   font-weight: 500;
@@ -201,13 +221,13 @@ html {
     font-size: 16px;
     line-height: 31px;
   }
-}
 
-.nav-link:hover {
-  transition-duration: 200ms;
-  transition-delay: 100ms;
-  text-decoration: underline;
-  color: #0d606f;
+  &:hover {
+    transition-duration: 200ms;
+    transition-delay: 100ms;
+    text-decoration: underline;
+    color: #0d606f;
+  }
 }
 
 nav > img {
@@ -217,36 +237,13 @@ nav > img {
   }
 }
 
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  background: rgba(13, 96, 111, 1);
-  color: white;
-  font-family: 'Red Hat Display';
-  font-size: 16px;
-  border-radius: 10px;
-  border: none;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(13, 96, 111, 0.16);
-}
-
-.button:hover {
-  transition-duration: 200ms;
-  transition-delay: 50ms;
-  color: rgba(242, 120, 92, 1);
-  cursor: pointer;
-}
-
-.button:hover {
-  transition-duration: 200ms;
-  transition-delay: 50ms;
-  color: rgba(242, 120, 92, 1);
-}
-
 .login__button {
+  @include button;
+
+  font-size: 16px;
   padding: 10px 31px;
   margin-left: 75px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(13, 96, 111, 0.16);
 
   @media (max-width: 880px) {
     margin-left: 30px;
@@ -369,8 +366,8 @@ h1 {
 }
 
 .search-field > button {
-  font-style: normal;
-  font-weight: 500;
+  @include button;
+
   font-size: 24px;
   line-height: 32px;
   letter-spacing: 1px;
@@ -559,6 +556,8 @@ h1 {
 }
 
 .destinations button {
+  @include button;
+
   margin-top: 40px;
   font-size: 24px;
   letter-spacing: 1px;

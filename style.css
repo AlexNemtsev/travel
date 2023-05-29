@@ -141,12 +141,12 @@ html {
 }
 
 @media (max-width: 880px) {
-  .logo > img {
+  .header__logo > img {
     width: 20px;
   }
 }
 @media (max-width: 390px) {
-  .logo > img {
+  .header__logo > img {
     width: 30px;
   }
 }
@@ -172,17 +172,17 @@ html {
   padding: 0;
 }
 
-.navbar > .list {
+.navbar__list {
   justify-content: flex-start;
   gap: 42px;
 }
 @media (max-width: 650px) {
-  .navbar > .list {
+  .navbar__list {
     display: initial;
   }
 }
 
-.nav-link {
+.navbar__link {
   font-family: "Red Hat Display";
   font-style: normal;
   font-weight: 500;
@@ -193,19 +193,18 @@ html {
   text-decoration: none;
 }
 @media (max-width: 650px) {
-  .nav-link {
+  .navbar__link {
     font-size: 12px;
     line-height: 20px;
   }
 }
 @media (max-width: 390px) {
-  .nav-link {
+  .navbar__link {
     font-size: 16px;
     line-height: 31px;
   }
 }
-
-.nav-link:hover {
+.navbar__link:hover {
   transition-duration: 200ms;
   transition-delay: 100ms;
   text-decoration: underline;
@@ -219,7 +218,7 @@ html {
   }
 }
 
-.button {
+.login__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -227,28 +226,19 @@ html {
   background: rgb(13, 96, 111);
   color: white;
   font-family: "Red Hat Display";
-  font-size: 16px;
   border-radius: 10px;
   border: none;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(13, 96, 111, 0.16);
-}
-
-.button:hover {
-  transition-duration: 200ms;
-  transition-delay: 50ms;
-  color: rgb(242, 120, 92);
-  cursor: pointer;
-}
-
-.button:hover {
-  transition-duration: 200ms;
-  transition-delay: 50ms;
-  color: rgb(242, 120, 92);
-}
-
-.login__button {
+  outline: none;
+  font-size: 16px;
   padding: 10px 31px;
   margin-left: 75px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(13, 96, 111, 0.16);
+}
+.login__button:hover {
+  transition-duration: 200ms;
+  transition-delay: 50ms;
+  color: var(--orange);
+  cursor: pointer;
 }
 @media (max-width: 880px) {
   .login__button {
@@ -382,8 +372,16 @@ h1 {
 }
 
 .search-field > button {
-  font-style: normal;
-  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: rgb(13, 96, 111);
+  color: white;
+  font-family: "Red Hat Display";
+  border-radius: 10px;
+  border: none;
+  outline: none;
   font-size: 24px;
   line-height: 32px;
   letter-spacing: 1px;
@@ -391,6 +389,12 @@ h1 {
   max-height: 58px;
   padding: 13px 32px;
   box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+}
+.search-field > button:hover {
+  transition-duration: 200ms;
+  transition-delay: 50ms;
+  color: var(--orange);
+  cursor: pointer;
 }
 @media (max-width: 880px) {
   .search-field > button {
@@ -588,11 +592,27 @@ h1 {
 }
 
 .destinations button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: rgb(13, 96, 111);
+  color: white;
+  font-family: "Red Hat Display";
+  border-radius: 10px;
+  border: none;
+  outline: none;
   margin-top: 40px;
   font-size: 24px;
   letter-spacing: 1px;
   box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
   padding: 10px 31px;
+}
+.destinations button:hover {
+  transition-duration: 200ms;
+  transition-delay: 50ms;
+  color: var(--orange);
+  cursor: pointer;
 }
 @media (max-width: 390px) {
   .destinations button {
