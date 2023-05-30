@@ -34,6 +34,7 @@
   --orange: #f2785c;
 }
 
+// TODO: Разнести стили по кнопкам
 @mixin button {
   display: flex;
   justify-content: center;
@@ -129,6 +130,13 @@ html {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+
+  & > img {
+    @media (max-width: 390px) {
+      width: 15px;
+      margin: 15.5px 0 9px 18px;
+    }
+  }
 }
 
 .burger-menu__list {
@@ -230,13 +238,6 @@ html {
   }
 }
 
-nav > img {
-  @media (max-width: 390px) {
-    width: 15px;
-    margin: 15.5px 0 9px 18px;
-  }
-}
-
 .login__button {
   @include button;
 
@@ -288,7 +289,6 @@ nav > img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-left: 120px;
   padding-top: 121px;
 
   @media (max-width: 1366px) {
