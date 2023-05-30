@@ -947,6 +947,16 @@ div.story-button {
 }
 
 .stories-list button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: rgb(13, 96, 111);
+  color: white;
+  font-family: "Red Hat Display";
+  border-radius: 10px;
+  border: none;
+  outline: none;
   padding: 9px 38px;
   margin-bottom: 15px;
   font-family: "Red Hat Display";
@@ -955,6 +965,12 @@ div.story-button {
   font-size: 24px;
   line-height: 32px;
   letter-spacing: 0.1px;
+}
+.stories-list button:hover {
+  transition-duration: 200ms;
+  transition-delay: 50ms;
+  color: var(--orange);
+  cursor: pointer;
 }
 @media (max-width: 390px) {
   .stories-list button {
@@ -1115,6 +1131,16 @@ body.active {
 }
 
 .facebook-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: rgb(13, 96, 111);
+  color: white;
+  font-family: "Red Hat Display";
+  border-radius: 10px;
+  border: none;
+  outline: none;
   background: #1877f2;
   box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
   border-radius: 10px;
@@ -1123,6 +1149,12 @@ body.active {
   font-size: 20px;
   line-height: 26px;
   margin-bottom: 20px;
+}
+.facebook-button:hover {
+  transition-duration: 200ms;
+  transition-delay: 50ms;
+  color: var(--orange);
+  cursor: pointer;
 }
 
 .facebook-button > img {
@@ -1144,6 +1176,16 @@ body.active {
 }
 
 .google-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: rgb(13, 96, 111);
+  color: white;
+  font-family: "Red Hat Display";
+  border-radius: 10px;
+  border: none;
+  outline: none;
   background: #ffffff;
   box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
   border-radius: 10px;
@@ -1152,6 +1194,12 @@ body.active {
   color: #0d606f;
   padding: 15px 0;
   margin-bottom: 30px;
+}
+.google-button:hover {
+  transition-duration: 200ms;
+  transition-delay: 50ms;
+  color: var(--orange);
+  cursor: pointer;
 }
 
 .or-line {
@@ -1209,10 +1257,26 @@ form > label {
 }
 
 .sign-in-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: rgb(13, 96, 111);
+  color: white;
+  font-family: "Red Hat Display";
+  border-radius: 10px;
+  border: none;
+  outline: none;
   padding: 14px;
   font-size: 20px;
   line-height: 26px;
   margin-bottom: 10px;
+}
+.sign-in-button:hover {
+  transition-duration: 200ms;
+  transition-delay: 50ms;
+  color: var(--orange);
+  cursor: pointer;
 }
 
 .login-popup > a {

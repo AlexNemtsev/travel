@@ -871,6 +871,8 @@ div.story-button {
 }
 
 .stories-list button {
+  @include button;
+
   padding: 9px 38px;
   margin-bottom: 15px;
   font-family: 'Red Hat Display';
@@ -1030,6 +1032,8 @@ body.active {
 }
 
 .facebook-button {
+  @include button;
+
   background: #1877f2;
   box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
   border-radius: 10px;
@@ -1057,6 +1061,8 @@ body.active {
 }
 
 .google-button {
+  @include button;
+
   background: #ffffff;
   box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
   border-radius: 10px;
@@ -1122,6 +1128,8 @@ form > label {
 }
 
 .sign-in-button {
+  @include button;
+
   padding: 14px;
   font-size: 20px;
   line-height: 26px;
